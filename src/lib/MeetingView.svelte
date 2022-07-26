@@ -23,6 +23,7 @@
   ];
   $: byMeetingDate = groupBy(rolesData, "meeting_date");
 
+  let currentName: string | null = null;
   // https://stackoverflow.com/questions/16918094/html-table-with-vertical-rows
   // https://stackoverflow.com/questions/26972529/is-there-a-html-character-that-is-blank-including-no-whitespace-on-all-browser
 </script>
@@ -43,7 +44,13 @@
       <td>{meetingDateRow[0].meeting_theme}</td>
       {#each roles as role}
         {#if role in byRole}
-          <td>{byRole[role][0].name}</td>
+          {@const name = byRole[role][0].name}
+          <td
+            on:mouseenter={() => (currentName = name)}
+            on:mouseleave={() => (currentName = null)}
+            style={currentName == name ? "background-color: green" : null}
+            >{byRole[role][0].name}</td
+          >
         {:else}
           <td><span>&#8203;</span></td>
         {/if}
