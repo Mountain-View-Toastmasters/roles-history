@@ -1,4 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-</p>
+<script lang="ts">
+  import { onMount } from "svelte";
+  import MeetingView from "$lib/MeetingView.svelte";
+
+  let rolesData: any[] = [];
+  onMount(async () => {
+    let resp = await fetch("/data.json");
+    rolesData = await resp.json();
+  });
+</script>
+
+<h1>toastmasters</h1>
+
+<MeetingView {rolesData} />
