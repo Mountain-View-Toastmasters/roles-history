@@ -9,6 +9,6 @@
   });
 </script>
 
-<h1>toastmasters</h1>
+<h1>Mountain View Toastmasters</h1>
 
 <MeetingView {rolesData} />

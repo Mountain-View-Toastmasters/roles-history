@@ -1,9 +1,12 @@
 <script lang="ts">
   import { groupBy, sortBy, uniq, get } from "lodash-es";
   export let rolesData: any[] = [];
+
+  // also include meeting_theme, but separately from roles
   const roles = [
-    "meeting_theme",
     "toastmaster",
+    "tech_chair",
+    "zoom_master",
     "jokemaster",
     "general_evaluator",
     "recorder",
@@ -18,35 +21,45 @@
     "evaluator_2",
     "evaluator_3",
   ];
-  $: tableData = convertToTable(rolesData);
+  $: byMeetingDate = groupBy(rolesData, "meeting_date");
 
-  // This logic is woefully complicated just to make a transposed table
-  function getByDate(obj, dates) {}
-
-  function convertToTable(rolesData: Array<any>) {
-    // each row contains a list of people who took on a role for a date
-    let table = [];
-    let byRole = groupBy(rolesData, "role");
-    let dates = sortBy(uniq(rolesData.map((r: any) => r.meeting_date)));
-    for (let role of roles) {
-      if (role == "meeting_theme") {
-        continue;
-      }
-      let row = [role];
-      let byMeeting = groupBy(byRole[role], "meeting_date");
-      console.log(byMeeting);
-      for (let date of dates) {
-        let entries = get(byMeeting, date, []);
-        if (entries.length == 0) {
-          row.push("");
-          continue;
-        }
-        row.push(entries[0].name);
-      }
-      table.push(row);
-    }
-    return table;
-  }
+  // https://stackoverflow.com/questions/16918094/html-table-with-vertical-rows
+  // https://stackoverflow.com/questions/26972529/is-there-a-html-character-that-is-blank-including-no-whitespace-on-all-browser
 </script>
 
-{JSON.stringify(tableData, null, 2)}
+<table>
+  <tr>
+    <th>meeting date</th>
+    <th>meeting theme</th>
+    {#each roles as role}
+      <th>{role.replace("_", " ")}</th>
+    {/each}
+  </tr>
+  {#each sortBy(Object.keys(byMeetingDate)) as meetingDate}
+    {@const meetingDateRow = byMeetingDate[meetingDate]}
+    {@const byRole = groupBy(meetingDateRow, "role")}
+    <tr>
+      <td>{meetingDateRow[0].meeting_date}</td>
+      <td>{meetingDateRow[0].meeting_theme}</td>
+      {#each roles as role}
+        {#if role in byRole}
+          <td>{byRole[role][0].name}</td>
+        {:else}
+          <td><span>&#8203;</span></td>
+        {/if}
+      {/each}
+    </tr>
+  {/each}
+</table>
+
+<style>
+  tr {
+    display: block;
+    float: left;
+  }
+  th,
+  td {
+    display: block;
+    border: 1px solid;
+  }
+</style>
