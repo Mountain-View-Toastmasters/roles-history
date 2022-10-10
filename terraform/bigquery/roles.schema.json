@@ -1,0 +1,349 @@
+{
+  "fields": [
+    {
+      "name": "date",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "meeting_theme",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "word_of_the_day",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "word_of_the_day_part_of_speech",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "word_of_the_day_definition",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "word_of_the_day_sample_sentence",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "meeting_location",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "sergeant_at_arms",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "secretary",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "tech_chair",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "zoom_master",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "toastmaster",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "jokemaster",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "general_evaluator",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "recorder",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "timer",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "ah_counter",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "wordmaster_grammarian",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "table_topics_master",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_1",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_1_pathway",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_1_level",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_1_project",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_1_speech_title",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_1_min_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_1_max_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_2",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_2_pathway",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_2_level",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_2_project",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_2_speech_title",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_2_min_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_2_max_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_3",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_3_pathway",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_3_level",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_3_project",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_3_speech_title",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_3_min_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_3_max_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_4",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_4_pathway",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_4_level",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_4_project",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_4_speech_title",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_4_min_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_4_max_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_5",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_5_pathway",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_5_level",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_5_project",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_5_speech_title",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_5_min_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "speaker_5_max_time",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "evaluator_1",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "evaluator_2",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "evaluator_3",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "evaluator_4",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "evaluator_5",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "waiting_list_speaker_1",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "waiting_list_speaker_2",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "club_president",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "vp_education",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "vp_membership",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "vp_public_relations",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "club_secretary",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "club_treasurer",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "club_sergeant_at_arms",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "mentorship_chair",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ]
+}
