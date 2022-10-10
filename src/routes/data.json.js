@@ -4,16 +4,14 @@ import { BigQuery } from "@google-cloud/bigquery";
 // https://github.com/googleapis/nodejs-bigquery/blob/main/samples/extractTableJSON.js
 // https://github.com/googleapis/nodejs-bigquery/blob/main/samples/query.js
 
-const bigquery = new BigQuery({ projectId: "mountain-view-toastmasters" });
-
 export async function GET() {
+  const bigquery = new BigQuery({ projectId: "mountain-view-toastmasters" });
+
   const query = `
     SELECT *
     FROM mvtm.roles_with_category
     WHERE meeting_date > date_sub(current_date(), INTERVAL 12 week)
   `;
-  console.log(query);
-
   const [job] = await bigquery.createQueryJob({
     query: query,
     location: "US",
@@ -25,6 +23,6 @@ export async function GET() {
     headers: {
       "access-control-allow-origin": "*",
     },
-    body: rows,
+    body: rows.map(r => ({...r, meeting_date: r.meeting_date.value})),
   };
 }
