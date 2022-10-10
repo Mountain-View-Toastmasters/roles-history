@@ -9,7 +9,7 @@ const bigquery = new BigQuery({ projectId: "mountain-view-toastmasters" });
 export async function GET() {
   const query = `
     SELECT *
-    FROM \`mountain-view-toastmasters.mvtm.roles_with_category\`
+    FROM mvtm.roles_with_category
     WHERE meeting_date > date_sub(current_date(), INTERVAL 12 week)
   `;
   console.log(query);

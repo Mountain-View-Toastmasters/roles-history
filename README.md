@@ -36,3 +36,12 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Notes
+
+```bash
+# only run this once...
+gcloud iam service-accounts keys create \
+    data/roles-history-service-account.json \
+    --iam-account roles-history@mountain-view-toastmasters.iam.gserviceaccount.com
+```
