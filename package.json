@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@google-cloud/bigquery": "^6.0.1",
     "lodash-es": "^4.17.21"
   }
 }
