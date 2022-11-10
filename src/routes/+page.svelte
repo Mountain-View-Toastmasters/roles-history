@@ -4,7 +4,9 @@
 
   let rolesData: any[] = [];
   onMount(async () => {
-    let resp = await fetch("/data.json");
+    let resp = await fetch(
+      "https://storage.googleapis.com/mountain-view-toastmasters/v1/query/roles_with_category.json"
+    );
     rolesData = await resp.json();
   });
 </script>
