@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { groupBy, sortBy, uniq, get } from "lodash-es";
+  import { groupBy, sortBy } from "lodash-es";
   export let rolesData: any[] = [];
 
   // also include meeting_theme, but separately from roles
@@ -36,7 +36,7 @@
       <th>{role.replace("_", " ")}</th>
     {/each}
   </tr>
-  {#each sortBy(Object.keys(byMeetingDate)) as meetingDate}
+  {#each sortBy(Object.keys(byMeetingDate)).reverse() as meetingDate}
     {@const meetingDateRow = byMeetingDate[meetingDate]}
     {@const byRole = groupBy(meetingDateRow, "role")}
     <tr>
