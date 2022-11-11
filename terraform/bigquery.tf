@@ -20,6 +20,25 @@ resource "google_bigquery_table" "roles" {
   }
 }
 
+resource "google_bigquery_table" "roster" {
+  dataset_id = google_bigquery_dataset.mvtm.dataset_id
+  table_id   = "roster"
+
+  schema = jsonencode(jsondecode(file("${path.module}/bigquery/roster.schema.json")).fields)
+
+  external_data_configuration {
+    autodetect    = false
+    source_format = "GOOGLE_SHEETS"
+
+    google_sheets_options {
+      range = "Roster!B5:G200"
+    }
+    source_uris = [
+      "https://docs.google.com/spreadsheets/d/1edC7fSgwzDEALY_RZa3rnV80KVpoGGr9WCb6chnjxnE"
+    ]
+  }
+}
+
 resource "google_bigquery_routine" "transpose" {
   dataset_id   = google_bigquery_dataset.mvtm.dataset_id
   routine_id   = "transpose"

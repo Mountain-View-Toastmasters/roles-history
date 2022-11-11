@@ -1,0 +1,34 @@
+{
+  "fields": [
+    {
+      "name": "first_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "last_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "club_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "full_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "email",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "officer_roles",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ]
+}

@@ -52,9 +52,20 @@ def main(request):
         """
             SELECT *
             FROM mvtm.roles_with_category
-            WHERE meeting_date > date_sub(current_date(), INTERVAL 12 week)
         """,
     )
+
+    dump_to_gcs(
+        "mountain-view-toastmasters",
+        "roster",
+        """
+            SELECT club_name as name
+            FROM mvtm.roster
+            WHERE club_name is not null
+        """,
+    )
+
+    return "OK", 200
 
 
 if __name__ == "__main__":
