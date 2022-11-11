@@ -64,5 +64,8 @@ WITH
   WHERE
     meeting_date >= "2020-09-01"
     AND name <> "-"
-    AND name NOT LIKE "Round-Robin%" )
+    AND name NOT LIKE "Round-Robin%"
+    AND lower(meeting_theme) NOT LIKE "club contest%"
+    ANd name <> "n/a"
+    )
 SELECT * from clean
